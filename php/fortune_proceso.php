@@ -1,0 +1,61 @@
+<?php
+    declare(strict_types=1);
+    session_start();
+
+    $suerte = [
+        "Hoy será un gran día para comenzar algo nuevo.",
+        "La paciencia te abrirá puertas inesperadas.",
+        "Una sorpresa agradable llegará pronto a tu vida.",
+        "Confía en tu intuición, te guiará bien.",
+        "La suerte acompaña a quienes se atreven.",
+        "Un pequeño paso hoy traerá grandes resultados mañana.",
+        "Tu esfuerzo pronto dará frutos.",
+        "La calma será tu mejor aliada.",
+        "Buenas noticias están más cerca de lo que imaginas.",
+        "La felicidad se encuentra en los detalles.",
+        "Hoy aprenderás algo que cambiará tu perspectiva.",
+        "Una persona especial pensará en ti.",
+        "No temas al cambio, trae oportunidades.",
+        "La perseverancia vencerá cualquier obstáculo.",
+        "Pronto recibirás una oportunidad valiosa.",
+        "Escucha con atención, una respuesta está cerca.",
+        "Tus ideas tienen el poder de crecer.",
+        "El éxito llegará con constancia y fe.",
+        "Una nueva amistad iluminará tu camino.",
+        "La energía positiva atraerá buenos momentos.",
+        "Hoy es un buen día para sonreír más.",
+        "El universo conspira a tu favor.",
+        "Tus decisiones te acercan a tus sueños.",
+        "Habrá armonía en tu entorno si mantienes la calma.",
+        "Lo que tanto esperas está en camino.",
+        "La fortuna favorece a los valientes.",
+        "Alguien reconocerá pronto tu esfuerzo.",
+        "Una puerta se cerrará para abrir otra mejor.",
+        "La sabiduría está en saber esperar.",
+        "Hoy encontrarás motivación donde menos lo esperas.",
+        "Un deseo guardado comenzará a cumplirse.",
+        "La alegría compartida se multiplica.",
+        "El momento indicado llegará antes de lo pensado.",
+        "Cada día trae una nueva posibilidad.",
+        "La gratitud atraerá abundancia a tu vida.",
+        "Tus talentos serán valorados muy pronto.",
+        "Un cambio positivo mejorará tu rutina.",
+        "La respuesta que buscas está dentro de ti.",
+        "Pronto vivirás una experiencia inolvidable.",
+        "La confianza será la clave de tu éxito.",
+        "Un gesto amable traerá recompensa.",
+        "Las dificultades de hoy serán enseñanzas mañana.",
+        "La suerte aparece cuando menos se la espera.",
+        "Tu creatividad te abrirá nuevos caminos.",
+        "Algo que parecía imposible comenzará a hacerse realidad.",
+        "La serenidad te ayudará a tomar la mejor decisión.",
+        "Una oportunidad económica puede sorprenderte.",
+        "Hoy será ideal para empezar de nuevo.",
+        "El amor y la amistad te rodean más de lo que crees.",
+        "Tu futuro guarda momentos muy felices."
+        ];
+
+    if (!isset($_SESSION['suerte'])) {
+        $_SESSION['suerte'] = $suerte[array_rand($suerte)];
+    }
+?>
