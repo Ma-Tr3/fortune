@@ -20,12 +20,14 @@
     <section class="container">
         <div class="titulo">
             <img src="img/cookiesFortune.png" alt="Fortune Cookie" class="fortune-image">
-            <h1>Bienvenido, Invitado!</h1>
+            <h1>Bienvenido, <?php echo $_SESSION['usuario']; ?>!</h1>
         </div>
         <div>
             <p>Elige tu suerte y disfruta de tu día. Recuerda que la fortuna favorece a los valientes.</p>
         </div>
-        <a href="fortune.php">Ver mi suerte</a>
+        <form action="fortune.php" method="POST">
+            <button type="submit">Ver mi suerte</button>
+        </form>
 
     </section>
     

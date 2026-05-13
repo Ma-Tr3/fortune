@@ -3,6 +3,8 @@
     session_unset(); 
     session_destroy(); 
 
+    setcookie("recordar_usuario", "", time() - 3600, "/");
+
     header("Location: login.php"); 
     exit();
 ?>

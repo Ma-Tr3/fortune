@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar</title>
+    <title>Registrar para saber tu suerte</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -23,7 +23,13 @@
             <img src="img/cookiesFortune.png" alt="Fortune Cookie" class="fortune-image">
             <h1>Regístrate para saber tu suerte!!!</h1>
         </div>
-        
+        <span>
+            <?php
+                if (isset($_GET['error'])) {
+                    echo "<p class='error'>".$_GET['error']."</p>";
+                }
+            ?>
+        </span>
         <form action="php/registrar_proceso.php" method="POST">
             <label for="usuario">Nombre de Usuario:</label>
             <input type="text" name="usuario" placeholder="Nombre de Usuario" required>
@@ -44,10 +50,5 @@
             <p>¿Ya tienes una cuenta? <a href="login.php">Inicia sesión aquí</a></p>
         </div>
     </section>
-    <?php
-        if (isset($_GET['error'])) {
-            echo "<p class='error'>".$_GET['error']."</p>";
-        }
-    ?>
 </body>
 </html>

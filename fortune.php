@@ -9,7 +9,7 @@
     
     require 'php/fortune_proceso.php';
 
-    $fortune = $suerte[array_rand($suerte)] ?? "No se encontró tu suerte. Por favor, inicia sesión o regístrate.";
+    $fortune = $suerte[array_rand($suerte)];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -33,9 +33,13 @@
             ?>
         </div>
 
-        <div class="logout">
-            <a href="logout.php">Cerrar Sesión</a>
-        </div>
+        <form class="otraSuerte" action="suerte.php" method="POST">
+            <button type="submit">Volver a elegir otra suerte</button>
+        </form>
+
+        <form class="logout" action="logout.php" method="POST">
+            <button type="submit">Cerrar Sesión</button>
+        </form>
     </section>
 </body>
 </html>
