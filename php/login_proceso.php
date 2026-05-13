@@ -4,6 +4,7 @@ session_start();
 
 $usuario = trim($_POST['usuario']);
 $password = trim($_POST['password']);
+$recordar = isset($_POST['recordar']);
 
 
 if (empty($usuario) || empty($password)) {
@@ -29,7 +30,7 @@ foreach ($data_usuarios as $user) {
 
         $_SESSION['usuario'] = $usuario;
 
-        if (isset($_POST['recordar'])) {
+        if ($recordar) {
             setcookie("recordar_usuario", $usuario, time() + 86400, "/");
         }
 
@@ -37,6 +38,7 @@ foreach ($data_usuarios as $user) {
         exit();
     }
 }
+
 header("Location: ../login.php?error=Usuario o contraseña incorrectos, parece que no tienes suerte hoy :(");
 exit();
 ?>
